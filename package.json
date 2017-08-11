@@ -1,0 +1,30 @@
+{
+    "name": "lib-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rimraf dist && ngc -p src/tsconfig.aot.json && gulp"
+    },
+    "author": "",
+    "license": "ISC",
+    "peerDependencies": {
+        "@angular/common": "*",
+        "@angular/compiler": "*",
+        "@angular/core": "*"
+    },
+    "devDependencies": {
+        "@angular/common": "^4.3.4",
+        "@angular/compiler": "^4.3.4",
+        "@angular/compiler-cli": "^4.3.4",
+        "@angular/core": "^4.3.4",
+        "gulp": "^3.9.1",
+        "gulp-less": "^3.3.2",
+        "rimraf": "^2.6.1",
+        "rxjs": "^5.4.3",
+        "typescript": "^2.4.2",
+        "zone.js": "^0.8.16"
+    }
+}
