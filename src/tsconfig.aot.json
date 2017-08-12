@@ -18,9 +18,7 @@
         "baseUrl": ""
     },
     "exclude": [
-        "**/*.spec.ts",
-        "./vendor.ts",
-        "./polyfills.ts"
+        "**/*.spec.ts"
     ],
     "angularCompilerOptions": {
         "skipTemplateCodegen": true,

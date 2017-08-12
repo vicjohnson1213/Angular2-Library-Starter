@@ -5,8 +5,11 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
+    "gulp": "gulp",
     "karma": "karma",
+    "tslint": "tslint",
     "test": "karma start",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "build": "rimraf dist && ngc -p src/tsconfig.aot.json && gulp"
   },
   "author": "",
@@ -27,8 +30,10 @@
     "@types/node": "^8.0.20",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^3.2.2",
+    "codelyzer": "^3.1.2",
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.2",
+    "gulp-sass": "^3.1.0",
     "jasmine": "^2.7.0",
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.2.0",
@@ -38,6 +43,7 @@
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
     "rxjs": "^5.4.3",
+    "tslint": "^5.6.0",
     "typescript": "^2.4.2",
     "webpack": "^3.5.3",
     "zone.js": "^0.8.16"

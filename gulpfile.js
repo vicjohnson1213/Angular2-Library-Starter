@@ -1,34 +1,29 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
+var sass = require('gulp-sass');
 var path = require('path');
 var inlineResources = require('./scripts/inline-resources');
 
-function build() {
-    return copyHtml();
-}
-
-function copyHtml() {
+gulp.task('copy', function() {
     return gulp.src('./src/**/*.html')
-        .pipe(gulp.dest('./dist'))
-        .on('end', copyLess);
-}
+        .pipe(gulp.dest('./dist'));
+});
 
-function copyLess() {
-    return gulp.src('./src/**/*.less')
-        .pipe(gulp.dest('./dist'))
-        .on('end', compileLess);
-}
-
-function compileLess() {
+gulp.task('compileLess', function() {
     return gulp.src('./src/**/*.less')
       .pipe(less())
-      .pipe(gulp.dest('./dist'))
-      .on('end', inline);
-}
+      .pipe(gulp.dest('./dist'));
+});
 
-function inline() {
+gulp.task('compileScss', function() {
+    return gulp.src('./src/**/*.scss')
+      .pipe(sass())
+      .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('inline', ['copy', 'compileLess', 'compileScss'], function() {
     inlineResources('./dist');
-}
+});
 
-gulp.task('build', build);
+gulp.task('build', ['copy', 'compileLess', 'compileScss', 'inline']);
 gulp.task('default', ['build']);
