@@ -1,30 +1,46 @@
 {
-    "name": "lib-test",
-    "version": "1.0.0",
-    "description": "",
-    "main": "dist/index.js",
-    "typings": "dist/index.d.ts",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "rimraf dist && ngc -p src/tsconfig.aot.json && gulp"
-    },
-    "author": "",
-    "license": "ISC",
-    "peerDependencies": {
-        "@angular/common": "*",
-        "@angular/compiler": "*",
-        "@angular/core": "*"
-    },
-    "devDependencies": {
-        "@angular/common": "^4.3.4",
-        "@angular/compiler": "^4.3.4",
-        "@angular/compiler-cli": "^4.3.4",
-        "@angular/core": "^4.3.4",
-        "gulp": "^3.9.1",
-        "gulp-less": "^3.3.2",
-        "rimraf": "^2.6.1",
-        "rxjs": "^5.4.3",
-        "typescript": "^2.4.2",
-        "zone.js": "^0.8.16"
-    }
+  "name": "lib-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "karma": "karma",
+    "test": "karma start",
+    "build": "rimraf dist && ngc -p src/tsconfig.aot.json && gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "@angular/common": "*",
+    "@angular/compiler": "*",
+    "@angular/core": "*"
+  },
+  "devDependencies": {
+    "@angular/common": "^4.3.4",
+    "@angular/compiler": "^4.3.4",
+    "@angular/compiler-cli": "^4.3.4",
+    "@angular/core": "^4.3.4",
+    "@angular/platform-browser": "^4.3.4",
+    "@angular/platform-browser-dynamic": "^4.3.4",
+    "@types/jasmine": "^2.5.53",
+    "@types/node": "^8.0.20",
+    "angular2-template-loader": "^0.6.2",
+    "awesome-typescript-loader": "^3.2.2",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2",
+    "jasmine": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.4",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.6.1",
+    "rxjs": "^5.4.3",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.3",
+    "zone.js": "^0.8.16"
+  },
+  "dependencies": {}
 }
