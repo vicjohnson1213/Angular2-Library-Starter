@@ -11,14 +11,14 @@ gulp.task('copy', function() {
 
 gulp.task('compileLess', function() {
     return gulp.src('./src/**/*.less')
-      .pipe(less())
-      .pipe(gulp.dest('./dist'));
+        .pipe(less())
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('compileScss', function() {
     return gulp.src('./src/**/*.scss')
-      .pipe(sass())
-      .pipe(gulp.dest('./dist'));
+        .pipe(sass())
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('inline', ['copy', 'compileLess', 'compileScss'], function() {

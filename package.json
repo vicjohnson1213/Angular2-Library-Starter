@@ -1,19 +1,18 @@
 {
-  "name": "lib-test",
+  "name": "angular2-library-starter",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "description": "A starter repository for an Angular 2 library complete with a build system, unit testing, and linting.",
   "scripts": {
     "gulp": "gulp",
     "karma": "karma",
     "tslint": "tslint",
     "test": "karma start",
+    "test:single": "karma start --single-run",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "build": "rimraf dist && ngc -p src/tsconfig.aot.json && gulp"
+    "build": "rimraf dist && ngc -p src/tsconfig.es5.json && gulp"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Victor Johnson<vicjohnson1213@gmail.com",
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "*",
     "@angular/compiler": "*",

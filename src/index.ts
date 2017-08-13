@@ -1,7 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { HelloWorldComponent } from './hello-world.component';
 
-export { HelloWorldComponent } from './hello-world.component';
+import { HelloWorldComponent } from './components/hello-world.component';
+export { HelloWorldComponent } from './components/hello-world.component';
 
 @NgModule({
     declarations: [HelloWorldComponent],
